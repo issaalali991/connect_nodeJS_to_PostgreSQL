@@ -1,6 +1,6 @@
 import express from 'express';
 import pool from './db/server.js';
-import booksRouter from './routes/booksRouter.js';
+import usersRouter from './routes/usersRouter.js';
 
 
 
@@ -8,7 +8,7 @@ const app = express();
 const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/books', booksRouter);
+app.use('/', usersRouter);
 
 
 
